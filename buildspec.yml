@@ -1,0 +1,25 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - npm install react
+      - npm install react-bootstrap
+      - npm install react-dom
+      - npm install react-highstock
+      - npm install react-router
+      - npm install react-router-dom
+      - npm install react-scripts
+
+  pre_build:
+    commands:
+  build:
+    commands:
+      - npm run build
+#     - mkdir build; touch build/a
+  post_build:
+    commands:
+      - aws s3 sync build/ s3://www.snaptrade.us
+#artifacts:
+#   files:
+

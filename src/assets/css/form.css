@@ -1,0 +1,7 @@
+.dark .form-control {background-color: #252830; border: 1px solid #555; color: #ddd}
+
+.lite .btn-default {background: #e6e6e6}
+.dark .btn-default {background: #444; border-color: #555; color: #ddd}
+.dark .btn-default:hover {background-color: #444}
+
+.dark .btn-primary, .dark .btn-primary:hover {color: #fff}

@@ -1,0 +1,8 @@
+.button-muted{border: 1px solid #1997c6;background: none;padding: 5px 10px; border-radius: 4px}
+
+.index-item {display: inline-block; padding: 0px 20px}
+.dark .index-item{border-right: 1px solid #555}
+.lite .index-item{border-right: 1px solid #ddd}
+.index-item:last-child { border-right : none }
+
+.popover.ticker {width: 390px}

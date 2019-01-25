@@ -1,0 +1,12 @@
+ul.stories {
+    padding-inline-start: 0
+}
+
+.stories li {
+    margin-bottom: 10px;
+    list-style-type: none
+}
+
+.stories strong {
+    color: #1896C5
+}

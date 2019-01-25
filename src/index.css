@@ -1,0 +1,111 @@
+
+.homepagehero{text-align: center;display: flex;flex-direction: column;justify-content:center;position: relative;background: #000 url('./assets/home-hero-banner-bg.jpg') 0 -100px no-repeat;background-size: cover;min-height: 80vh}
+.herooverlay{position: absolute;background: #000; opacity: 0.5;top: 0;left:0;right: 0;bottom: 0;z-index: 0}
+.hero-title, .hero-keypoints{display: inline-block;flex-grow:0;}
+.hero-title {font-size: 4rem;z-index: 1}
+.hero-keypoints {margin-top: 1rem;z-index: 1}
+.getstarted-btn{z-index: 1}
+
+.features{padding: 20px;z-index: 888;font-size: 16px;color: #fff}
+.chart-hero{padding: 20px 0;}
+.bdr-red{border-top: 5px solid #a94442;padding-top: 10px}
+.bdr-green{border-top: 5px solid #3c763d;padding-top: 10px}
+.footer{padding: 10px; text-align: center;}
+.tmargin20{margin-top: 20px;}
+.pageDesc{font-size: 18px;line-height: 30px;font-family: 'Roboto Slab', serif;}
+.pagehero{padding: 10px 20px;margin-bottom: 20px;margin-top: 20px;}
+.stockhl{font-size: 60%}
+.faqs a{font-size: 16px;} .faqans h2{font-size: 24px;}
+.faqans p{font-size: 16px;}
+.backtotop a{font-size: 16px;}
+.newtag{padding: 0 5px;border-radius: 3px;}
+
+.privacy-statement, .termsofuse{font-size: 13px;line-height: 20px;}
+.starpoints{font-size: 11px;color: #333}
+.feedback-btn{position: fixed;bottom: 10px; right: 10px;font-size: 18px;display: none;}
+.feedback-btn a{color: #000}
+.waitlist-panel{background: #fff url('./assets/cash_prize.png') 20px 20px no-repeat;background-size:contain;padding: 0;border: 1px solid #f2f2f2;color: #333}
+.waitlist-panel .form-group{margin-right: 10px;}
+
+.modal-dialog{margin: 70px auto;width: 1000px;}
+.helpicon img{width: 98%}.helpicon{width: 50px;height: 50px;}
+.glyphicon-play-circle{font-size: 18px;}
+.colabcomments{margin: 0;padding: 0}.colabcomments li{list-style: none;margin: 15px 0;}
+.colabcomments li .commentItem{display:inline-block;padding: 10px 20px;-webkit-border-radius: 25px;-moz-border-radius: 25px;border-radius: 25px;box-shadow:0px 0px 3px 0 #ddd; }
+.colabcomments li strong{color:#337ab7 }
+.colabcomments li .profilepic{display: inline-block;padding: 15px;border: 1px solid #ddd;-webkit-border-radius: 25px;-moz-border-radius: 25px;border-radius: 25px;margin: 0 10px 0 0}
+
+.portfolioContest{border-radius:0; margin-top: 15px;border: 0;font-size:14px;box-shadow: none;
+  background: #ffffff;
+}
+.portfolioContest .contentLbl{border-color: #2ebd59;background-color: #2ebd59;padding: 5px 10px;
+    border-radius: 3px;color: white;font-size: 14px;line-height: 22px;font-weight: bold;display: inline-block;margin: 0 0 10px -20px}
+.portfolioContest .radio{margin: 0 10px 0 10px}
+.portfolioContest .note{margin-top: 10px;font-size: 12px;display: block;}
+
+.portfolioTbl h4{font-size: 14px;color: #59596b;text-transform: uppercase;}
+.portfolioTbl h4 span{font-size: 25px;color: #333;padding-top: 5px;display: block;}
+
+.engagementToolbar{padding: 20px 0;}
+.engagementToolbar ul{margin: 0;padding:0 5px}
+.engagementToolbar ul li{list-style: none;margin-right: 20px;float: left;font-size: 15px}
+.engagementToolbar ul li a{font-size: 18px;}.engagementToolbar ul li a:hover{text-decoration: none;}
+
+.filtersBar{margin: 0 0 20px 0;float: right;padding: 5px 10px;}
+.filtersBar li{list-style: none;float: left;margin-right: 10px;}
+
+.myrank{color: #ffffff;width: 75px;height: 75px;background: #2ebd59;border-radius: 40px;border: 1px solid #2ebd59;text-align: center;padding-top: 15px;font-weight: bold;float: left;line-height: 20px;margin-right: 10px;}
+.myrank span{font-size: 30px;}
+
+.signedupmsg{margin-top: 20px;}
+.homesignup-form{margin-top: 20px;}
+.homesignup-form input, .homesignup-form button{border: none}
+.homesignup-form button {background: rgb(253, 157, 71);margin: -1px 0 0 5px}
+
+.tradeidea{background:none;border: 1px solid #434857;padding:10px 30px;width: 500px}
+.thankyouwaitlist{background: #fff;margin: 30px auto;box-shadow: 2px 2px 2px 2px #ddd;padding: 50px;}
+
+/* https://stackoverflow.com/questions/29522884/how-to-position-and-resize-react-bootstrap-tooltip-before-displaying-it-on-the-d */
+.popover { max-width: none; }
+
+.signedupmsg{margin: -20px 0 15px 0}
+
+.show-on-hover-trigger .show-on-hover-target {visibility: hidden}
+.show-on-hover-trigger:hover .show-on-hover-target {visibility: visible}
+
+.addtickers-block{margin: 15px 0}
+
+
+/******* Optimized Code ******/
+.lite .portfolioTbl h4{text-transform: uppercase;}
+.lite .portfolioTbl h4 span{font-size: 25px;padding-top: 15px;display: block;}
+
+.dark .portfolioTbl h4{text-transform: uppercase;}
+.dark .portfolioTbl h4 span{font-size: 25px;color: #fff;padding-top: 15px;display: block;}
+
+
+
+@media (max-width: 768px){
+    .features{font-size: 16px;}
+    .homepagehero{background-position: top right;}
+    .portfolioContest .contentLbl{margin-right: -20px;margin-bottom: 15px;}
+    .portfolioContest .radio{margin: 0 10px 10px 10px}
+    .portfolioContest button{margin-bottom: 10px;}
+    .panelTitle{font-size: 20px;line-height: 25px;}
+    .filtersBar li{float: none;}.filtersBar{float:none}
+    .stockhl{font-size: 45% !important}
+    .engagementToolbar *{font-size: 105% !important;}
+    .hero-title {font-size: 3rem}
+    .homesignup-form button{margin: 10px 0 0 0}
+
+}
+
+@media (min-width: @screen-lg-min) {
+    .homepagehero{background-position:0 bottom;}
+}
+@media only screen and (min-device-width: 1536px) and (max-device-width: 2048px) {
+    .homepagehero{background-position:0 0;}
+}
+@media only screen and (min-device-width: 2049px) and (max-device-width: 2560px) {
+    .homepagehero{background-position:0 center;}
+}

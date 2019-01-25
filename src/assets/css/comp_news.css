@@ -1,0 +1,9 @@
+
+@media (max-width: 767px) {
+  .news-pic { max-width: 100px }
+  .dashboard .main {padding: 0}
+}
+
+@media (min-width: 768px) {
+  .dashboardnews{height: 1800px; overflow-x: hidden;overflow-y: scroll;height: 1800px}
+}

@@ -1,0 +1,13 @@
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  padding: 5px
+}
+.dark .table>tbody>tr>td, .dark .table>tbody>tr>th, .dark .table>tfoot>tr>td, .dark .table>tfoot>tr>th, .dark .table>thead>tr>td, .dark .table>thead>tr>th {
+  border-top:1px solid #444
+}
+.table>tbody+tbody{border-top: 1px solid #fff}
+
+.table .table { background-color : inherit;}
+
+.dark .table-hover>tbody>tr:hover {
+    background-color: #333;
+}

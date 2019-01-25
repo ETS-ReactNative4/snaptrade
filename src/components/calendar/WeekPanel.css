@@ -1,0 +1,37 @@
+ul.weekCont {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 80px;
+}
+
+.dark ul.weekCont {
+  border: 1px solid #444;
+}
+
+ul.weekCont li {
+    display: inline-block;
+    width: 14%;
+    border-left: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dark ul.weekCont li {
+  border-left: 1px solid #444;
+}
+
+ul.weekCont li:first-child {
+    border-left: none;
+}
+
+ul.weekCont li.selectedDate {
+  background-color: #ddf
+}
+
+.dark ul.weekCont li.selectedDate {
+  background-color: #336
+}

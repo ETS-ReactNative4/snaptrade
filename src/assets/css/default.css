@@ -1,0 +1,97 @@
+/*
+THIS FILE OVERRIDES COLOR PROPERTIES OF HTML ELEMENTS AND BOOTSTRAP TEXT CLASSES
+
+IMPORTANT: PLEASE DO NOT CHANGE DEFAULT SIZING (MARGIN, PADDING, FONT-SIZE, ETC)
+
+WE CAN CHANGE COLOR AND FONT FACE
+
+references:
+background: dark: 1a1c20, lite #fff
+alt background: dark: #333, lite #eee
+border color: dark: #444, lite: #ddd
+
+normal font: dark: #cfd2da, lite, #333
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700');
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic");
+
+body {margin: 0;padding: 0;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}
+@media (max-width: 767px) {
+  body {margin: 0;padding: 0;font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif}
+}
+
+/* ----------------------------------------- default font, background color */
+body.dark {background:#1a1c20; color: #cfd2da}
+/* body.lite {background: #f3f6f8, color: #212529} */
+
+/* ----------------------------------------- default link color */
+.dark a{color: #1997c6}
+.dark a:hover{color: #337ab7}
+/* .lite a, .lite a:hover{color: #08f} */
+a:hover,a:focus {text-decoration: none;}
+
+/* ----------------------------------------- default success, error colors, also up/down */
+.dark .text-success{color: #6c9}
+.dark .text-danger{color: #e44}
+.lite .text-success{color: #090}
+.lite .text-danger{color: #f34}
+
+/* ----------------------------------------- default muted text color */
+.dark .text-muted{color: #a1a1a1}
+
+/* ----------------------------------------- default header color */
+h1,h2,h3,h4,h5{font-family: 'Roboto Slab'}
+
+/* ----------------------------------------- default popover color */
+.dark .popover {background:#1a1c20; color: #cfd2da; border-color: #aaa}
+.dark .popover-title {background:#252830; border-bottom-color:#444}
+/* top popup triangle */
+/* following interferes with right and left popup triangle borders, hence disabled */
+.dark .popover1>.arrow:after {border-top-color:#1a1c20} /* fill */
+.dark .popover.top>.arrow {border-top-color:#aaa} /* border */
+/* bottom popup triangle */
+/* following interferes with right and left popup triangle borders, hence disabled */
+.dark .popover1>.arrow:after {border-bottom-color:#1a1c20} /* fill */
+.dark .popover.bottom>.arrow {border-bottom-color:#aaa} /* border */
+/* left popup triangle */
+.dark .popover>.arrow:after {border-left-color:#1a1c20} /* fill */
+.dark .popover.left>.arrow {border-left-color:#aaa} /* border */
+/* right popup triangle */
+.dark .popover>.arrow:after {border-right-color:#1a1c20} /* fill */
+.dark .popover.right>.arrow {border-right-color:#aaa} /* border */
+
+/* ----------------------------------------- default alert color */
+.alert-warning { background-color: inherit; border: none}
+.dark .alert-warning { color: #970 }
+.lite .alert-warning { color: #970 }
+
+/* ----------------------------------------- default tooltip color
+.dark .tooltip.right .tooltip-arrow { border-right-color : #a1a1a1}
+.dark .tooltip > .tooltip-inner {background-color: #a1a1a1;}
+.dark .tooltip.in {opacity:1!important;}
+*/
+.visible{
+  display:block;
+}
+.hidden{
+  display:none;
+}
+.help{
+  position: relative;
+  top: -50px;
+  left:80px;
+  color:#fd9d47;  
+  cursor: pointer;
+}
+.video-wrapper {position: relative;}
+.video-wrapper iframe {position: absolute; left: calc(30%); width: 568px; height: 300px}
+
+.watchlist-help-video {top: 60px}
+.scanner-help-video {top: -100px;}
+.discovery-help-video {top: -20px}
+.menu {width:100px}
+.text-center{text-align:center}
+.pad-top{margin-top: 20px}
+.small-light{color:#aaa; font-size: 12px}
+.float-right{float:right}

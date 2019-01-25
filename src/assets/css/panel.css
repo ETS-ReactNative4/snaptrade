@@ -1,0 +1,13 @@
+.panel {background: none}
+.dark .panel{border: 1px solid #444}
+.lite .panel{border: 1px solid #ddd}
+
+.panel-default>.panel-heading {background: none; border: none}
+.dark .panel-default>.panel-heading>.panel-title {color: #bbb}
+.lite .panel-default>.panel-heading>.panel-title {color: #777}
+
+.dark .panel-footer{background-color: #fff}
+
+.panel-more-btn{position: absolute;right: 20px; top: 10px;}
+
+.dark .panel-default>.panel-heading>h3 {color: #ccc}
