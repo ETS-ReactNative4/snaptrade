@@ -47,8 +47,8 @@ class TickerPanelShortInfo extends Component {
 
     render() {
         const {shortDesc, showDesc,showStories,stories} = this.state;
-        return (
-            shortDesc.length !== 0 && (
+        if (shortDesc !== null && shortDesc.length !== 0) {
+            return (
                 <div>
                     <div style={{marginTop: 10}}>
                         <h3 className="panel-title"><br/><b>About</b></h3>
@@ -66,7 +66,17 @@ class TickerPanelShortInfo extends Component {
                         {this.More("showStories",showStories)}
                     </div>
                 </div>
-            )
+            );
+        }
+        return (
+            <div>
+                <div style={{marginTop: 10}}>
+                    <br/>
+                    <h3 className="panel-title"><b>Quick Summary</b></h3>
+                    {this.StoriesList(!showStories ? stories.slice(0, 3)  : stories)}
+                    {this.More("showStories",showStories)}
+                </div>
+            </div>
         );
     }
 }
