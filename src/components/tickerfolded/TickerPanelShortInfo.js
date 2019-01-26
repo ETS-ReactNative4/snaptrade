@@ -38,7 +38,7 @@ class TickerPanelShortInfo extends Component {
 
     More = (name,data) =>{
         return(
-            <u style={{cursor: "pointer", userSelect: 'none'}}
+            <u style={{cursor: "pointer", color: "#009ac2", userSelect: 'none', whiteSpace: 'nowrap'}}
                onClick={() => this.onChange(name, !data)}>{!data ? "Read more" : "Hide"}
             </u>
         )
@@ -51,7 +51,8 @@ class TickerPanelShortInfo extends Component {
             shortDesc.length !== 0 && (
                 <div>
                     <div style={{marginTop: 10}}>
-                        <h3 className="panel-title">About</h3>
+                        <br/>
+                        <h3 className="panel-title"><b>About</b></h3>
                         <div style={{marginTop: 5}}>
                             {!showDesc ? shortDesc.slice(0, 170) + "..." : shortDesc}
                             {' '}
@@ -60,7 +61,8 @@ class TickerPanelShortInfo extends Component {
                     </div>
 
                     <div style={{marginTop: 10}}>
-                        <h3 className="panel-title">Quick Summary</h3>
+                        <br/>
+                        <h3 className="panel-title"><b>Quick Summary</b></h3>
                         {this.StoriesList(!showStories ? stories.slice(0, 3)  : stories)}
                         {this.More("showStories",showStories)}
                     </div>
