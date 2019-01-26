@@ -63,7 +63,7 @@ class ChartWatchList extends Component {
                             chart.lbl
                                 .show()
                                 .attr({
-                                    text: '$' + e.target.y + "<br/>" + "$" + e.target.portfoliogain + "(" + e.target.portfoliogainpct.toFixed(1) + "%" + ")"
+                                    text: '<p style="font-size:30px;">' + '$' + e.target.y + "</p>" + "<br/>" + (e.target.portfoliogai > 0 ? '<p style="font-size:10px; color:#6c9;">' : '<p style="font-size:10px; color:#e44;">') + "$" + e.target.portfoliogain + "(" + e.target.portfoliogainpct.toFixed(1) + "%" + ")" + "</p>"
                                 });
                         }
                     }
