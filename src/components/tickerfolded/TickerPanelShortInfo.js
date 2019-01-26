@@ -51,8 +51,7 @@ class TickerPanelShortInfo extends Component {
             shortDesc.length !== 0 && (
                 <div>
                     <div style={{marginTop: 10}}>
-                        <br/>
-                        <h3 className="panel-title"><b>About</b></h3>
+                        <h3 className="panel-title"><br/><b>About</b></h3>
                         <div style={{marginTop: 5}}>
                             {!showDesc ? shortDesc.slice(0, 170) + "..." : shortDesc}
                             {' '}

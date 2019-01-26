@@ -19,13 +19,8 @@ const GainPanelUI = ({context, runDate, runTime, gainList,
     onRowSignalClick, onRowWatchClick, onScrollToSignUp,
     sortColumn, sortOrder, onSort}) =>
   <div className="tmargin20">
-    <h3 className="panelTitle">Gains From Recent Discoveries {/*<span className='text-muted small'>{runDate}</span>*/}</h3>
+    <h3 className="panelTitle">Discover new potential winning stocks {/*<span className='text-muted small'>{runDate}</span>*/}</h3>
     <ul className="filtersBar">
-        <li><DaysPassedSelectBoxUI
-          ageRangeList={ageRangeList}
-          selectedAgeRangeId={selectedAgeRangeId}
-          onAgeRangeChange={onAgeRangeChange}
-        /></li>
         <li><SectorSelectBoxUI
           sectorList={sectorList}
           selectedSectorId={selectedSectorId}
@@ -45,7 +40,7 @@ const GainPanelUI = ({context, runDate, runTime, gainList,
     <MainTickerTable
       context={context}
       tickerList={gainList}
-      columnList={new Set(['name', 'volume', 'volume_chg', '3d_change_pct', '14d_change_pct', 'first_signal_date', 'signal_gain'])}
+      columnList={new Set(['name', ,'sector', 'volume', 'volume_chg', '3d_change_pct', '14d_change_pct'])}
     />
 
     <strong>*Price and Volume data may not show or show incorrectly due to the following factors</strong>

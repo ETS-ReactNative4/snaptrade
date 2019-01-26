@@ -16,40 +16,6 @@ const SignalsPageUI = props =>
       context={props.context}
     />*/}
 
-    <AlertPanel
-      context={props.context}
-      anonymous={props.anonymous}
-      ticker={props.ticker}
-
-      filtersUpdated={props.signalFiltersUpdated}
-      minPrice={props.minPrice}
-      maxPrice={props.maxPrice}
-      minVolume={props.minVolume}
-      maxVolume={props.maxVolume}
-      sectorId={props.sectorId}
-      ruleId={props.ruleId}
-      onScrollToSignUp={props.onScrollToSignUp}
-
-      runDate={props.runDate}
-      runTime={props.runTime}
-      // price filter
-      priceRangeList={props.priceRangeList}
-      selectedPriceRangeId={props.selectedPriceRangeId}
-      onPriceRangeChange={props.onPriceRangeChange}
-      // volume filter
-      volumeRangeList={props.volumeRangeList}
-      selectedVolumeRangeId={props.selectedVolumeRangeId}
-      onVolumeRangeChange={props.onVolumeRangeChange}
-      // sector filter
-      sectorList={props.sectorList}
-      selectedSectorId={props.selectedSectorId}
-      onSectorChange={props.onSectorChange}
-      //
-      ruleList={props.ruleList}
-      selectedRuleId={props.selectedRuleId}
-      onRuleChange={props.onRuleChange}
-    />
-
     <GainPanel
       context={props.context}
       anonymous={props.anonymous}
@@ -83,6 +49,40 @@ const SignalsPageUI = props =>
       onScrollToSignUp={props.onScrollToSignUp}
     />
 
+    <AlertPanel
+      context={props.context}
+      anonymous={props.anonymous}
+      ticker={props.ticker}
+
+      filtersUpdated={props.signalFiltersUpdated}
+      minPrice={props.minPrice}
+      maxPrice={props.maxPrice}
+      minVolume={props.minVolume}
+      maxVolume={props.maxVolume}
+      sectorId={props.sectorId}
+      ruleId={props.ruleId}
+      onScrollToSignUp={props.onScrollToSignUp}
+
+      runDate={props.runDate}
+      runTime={props.runTime}
+      // price filter
+      priceRangeList={props.priceRangeList}
+      selectedPriceRangeId={props.selectedPriceRangeId}
+      onPriceRangeChange={props.onPriceRangeChange}
+      // volume filter
+      volumeRangeList={props.volumeRangeList}
+      selectedVolumeRangeId={props.selectedVolumeRangeId}
+      onVolumeRangeChange={props.onVolumeRangeChange}
+      // sector filter
+      sectorList={props.sectorList}
+      selectedSectorId={props.selectedSectorId}
+      onSectorChange={props.onSectorChange}
+      //
+      ruleList={props.ruleList}
+      selectedRuleId={props.selectedRuleId}
+      onRuleChange={props.onRuleChange}
+    />
+    
     {
       props.justSignedUp &&
       <WatchlistTickers
