@@ -51,7 +51,7 @@ class ChartWatchList extends Component {
                             if (!chart.lbl) {
                                 chart.lbl = chart.renderer.label('')
                                     .attr({
-                                        padding: 10,
+                                        padding: 20,
                                         r: 10,
                                     })
                                     .css({
