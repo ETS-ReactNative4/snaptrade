@@ -34,12 +34,14 @@ const WatchListPanelUI = ({
 
         {
             !filteringTagObj && !embeddableTagUuid &&
-            <div style={{display:'flex',alignItems:"center"}}>
+            <div style={{alignItems:"center"}}>
 
+                <div style={{width:"100%", padding:"10px"}}><ChartWatchList/></div>
+                <p align="center">Simulated Paper Portfolio based on all stocks in your watchlist</p>
                 <AddTickersBox
                     onWatchlistTickersChange={onWatchlistTickersChange}
                 />
-                <div style={{width:"100%"}}><ChartWatchList/></div>
+                
             </div>
         }
 
