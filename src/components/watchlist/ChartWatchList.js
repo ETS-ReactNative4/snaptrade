@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import ChartPanelUI from './ChartWatchListUI.js';
-import chart_tickers from '../../apiclient/chart_tickers.js';
-import watchlist_portfolio from '../../apiclient/watchlist/watchlist_portfolio.js';
+import watchlist_portfolio from '../../apiclient/watchlist/watchlist_portfolio';
 
 class ChartWatchList extends Component {
     constructor(props) {
@@ -11,7 +10,6 @@ class ChartWatchList extends Component {
             eventArray: null,
             data: null,
             ohlcData: null,
-            fiveYrLoaded: false,
             title: {}
         };
 
@@ -19,10 +17,8 @@ class ChartWatchList extends Component {
     }
 
     render() {
-        console.warn(options)
         return (
             <ChartPanelUI
-                title={"123"}
                 isLoading={this.state.isLoading}
                 options={options}
             />
@@ -76,37 +72,30 @@ class ChartWatchList extends Component {
         return s
     }
 
-    text = (e) => {
-        // options.title({
-        //     text: 'Subtitle'
-        // })
-    };
 
     // https://www.highcharts.com/docs/chart-and-series-types/technical-indicator-series
     getTickerChartCallback(priceList) {
-        console.warn(priceList)
         console.log('perf', 'received', new Date());
 
         let priceListAsc = priceList.slice();
-        console.warn(priceListAsc);
-        let newArray = priceListAsc.map(price => ({
+            let newArray = priceListAsc.map(price => ({
             x: Date.parse(price.date),
-            y: price.portfolio_value,
+            y: Number.parseFloat(price.portfolio_value),
             portfoliogain: price.portfolio_gain,
             portfoliogainpct: price.portfolio_pct_gain
-        }))
+        }));
 
         options.yAxis = [{title: {text: ''}}];
         options.series = this.getOptionsSeries();
         options.rangeSelector = false;
+        console.warn(newArray)
         options.series[0].data = newArray;
-        options.colors = ['#0081f2']
+        options.colors = ['#0081f2'];
 
         console.log('perf', 'draw', new Date());
 
         this.setState({
             isLoading: false,
-            fiveYrLoaded: true
         });
     }
 
