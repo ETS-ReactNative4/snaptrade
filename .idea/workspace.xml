@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d50f3a90-1ad8-4f28-beb1-4f847894b01e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/apiclient/watchlist/watchlist_portfolio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/watchlist/ChartWatchList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/watchlist/ChartWatchListUI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/watchlist/WatchListPanelUI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/watchlist/WatchListPanelUI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/HeaderPanelUI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/HeaderPanelUI.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,53 +16,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/watchlist/ChartWatchList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="65" column="143" selection-start-line="65" selection-start-column="143" selection-end-line="65" selection-end-column="143" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apiclient/chart_tickers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/watchlist/ChartWatchListUI.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-              <folding>
-                <element signature="e#273#318#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apiclient/watchlist/watchlist_portfolio.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/apiclient/watchlist/watchlist_tickers.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/common/HeaderPanelUI.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/ticker/ChartPanel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2787">
-              <caret line="287" column="7" lean-forward="true" selection-start-line="280" selection-start-column="7" selection-end-line="287" selection-end-column="7" />
+              <caret line="287" column="7" selection-start-line="280" selection-start-column="7" selection-end-line="287" selection-end-column="7" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -116,7 +84,10 @@
       <find>zoom</find>
       <find>ticker</find>
       <find>drawIndicator</find>
+      <find>Ticker or</find>
+      <find>placeholder</find>
       <find>options</find>
+      <find>ticker or</find>
     </findStrings>
     <dirStrings>
       <dir>C:\File\work\snaptrade_frontend\src\components\ticker</dir>
@@ -137,6 +108,7 @@
         <option value="$PROJECT_DIR$/src/components/watchlist/ChartWatchListUI.js" />
         <option value="$PROJECT_DIR$/src/components/watchlist/WatchListPanelUI.js" />
         <option value="$PROJECT_DIR$/src/components/watchlist/ChartWatchList.js" />
+        <option value="$PROJECT_DIR$/src/components/common/HeaderPanelUI.js" />
       </list>
     </option>
   </component>
@@ -158,6 +130,17 @@
             <path>
               <item name="snaptrade_frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="snaptrade_frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snaptrade_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snaptrade_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snaptrade_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snaptrade_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -195,12 +178,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548497313886</updated>
-      <workItem from="1548497316286" duration="14359000" />
+      <workItem from="1548497316286" duration="16451000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14359000" />
+    <option name="totallyTimeSpent" value="16451000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -208,11 +200,11 @@
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.36827195" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
@@ -220,7 +212,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -376,7 +368,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/ticker/ChartPanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2787">
-          <caret line="287" column="7" lean-forward="true" selection-start-line="280" selection-start-column="7" selection-end-line="287" selection-end-column="7" />
+          <caret line="287" column="7" selection-start-line="280" selection-start-column="7" selection-end-line="287" selection-end-column="7" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -407,13 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apiclient/watchlist/watchlist_portfolio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/watchlist/WatchListPanelUI.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -424,19 +409,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apiclient/watchlist/watchlist_tickers.js">
+    <entry file="file://$PROJECT_DIR$/src/components/watchlist/ChartWatchList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        <state relative-caret-position="4">
+          <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/watchlist/ChartWatchList.js">
+    <entry file="file://$PROJECT_DIR$/src/apiclient/watchlist/watchlist_portfolio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="65" column="143" selection-start-line="65" selection-start-column="143" selection-end-line="65" selection-end-column="143" />
+        <state relative-caret-position="340">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apiclient/watchlist/watchlist_tickers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/HeaderPanelUI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
