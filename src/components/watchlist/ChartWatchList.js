@@ -3,6 +3,8 @@ import ChartWatchListUI from './ChartWatchListUI.js';
 import watchlist_portfolio from '../../apiclient/watchlist/watchlist_portfolio';
 import ChartPanelUI from "../ticker/ChartPanel";
 
+
+
 class ChartWatchList extends Component {
     constructor(props) {
         super(props);
@@ -24,6 +26,9 @@ class ChartWatchList extends Component {
     }
 
     componentWillMount() {
+        setInterval(()=> {
+            watchlist_portfolio.get(this.getTickerChartCallback, this.props.tagId, "1y_a");
+        }, 120000);
         console.log('perf', 'calling 1yr', new Date());
 
         watchlist_portfolio.get(this.getTickerChartCallback, this.props.tagId, "1y_a");
