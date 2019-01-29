@@ -37,22 +37,23 @@ class ChartWatchList extends Component {
                 events: {
                     mouseOut: (e) => {
                         let chart = e.target.chart;
-                        if (!chart.lbl) {
-                            chart.lbl = chart.renderer.label('')
-                                .attr({
-                                    translateY: 23
-                                })
-                                .css({
-                                    color: '#FFFFFF',
+                            if (!chart.lbl) {
+                                chart.lbl = chart.renderer.label('')
+                                    .attr({
+                                        translateY: 23
+                                    })
+                                    .css({
+                                        color: '#FFFFFF',
 
-                                })
-                                .add();
-                        }
+                                    })
+                                    .add();
+                            }
                         chart.lbl
                             .show()
                             .attr({
-                                y: 60,
-                                text: '<p style="font-size:30px">' + '$' + e.target.data[0].y + "</p>" + "<br/>" + '<p style="font-size:10px; color:#1a1c20">' + '$' + '</p>' + "<br/>" + (e.target.data[0].portfoliogai > 0 ? '<p style="font-size:10px; color:#6c9;">' : '<p style="font-size:10px; color:#e44;">') + "$" + e.target.data[0].portfoliogain + "(" + e.target.data[0].portfoliogainpct.toFixed(1) + "%" + ")" + "</p>"
+                                x:10,
+                                y: 55,
+                                text: '<p style="font-size:30px">' + '$' + e.target.data[0].y + "</p>" + "<br/>" + '<p style="font-size:10px; color:#1a1c20">' + '$' + '</p>' + "<br/>" + (e.target.data[0].portfoliogain > 0 ? '<p style="font-size:12px; color:#6c9;">' : '<p style="font-size:12px; color:#e44;">') + "$" + e.target.data[0].portfoliogain + "(" + e.target.data[0].portfoliogainpct.toFixed(1) + "%" + ")" + "</p>"
                             });
                     }
                 },
@@ -73,8 +74,9 @@ class ChartWatchList extends Component {
                             chart.lbl
                                 .show()
                                 .attr({
-                                    y: 60,
-                                    text: '<p style="font-size:30px">' + '$' + e.target.y + "</p>" + "<br/>" + '<p style="font-size:10px; color:#1a1c20">' + '$' + '</p>' + "<br/>" + (e.target.portfoliogai > 0 ? '<p style="font-size:10px; color:#6c9;">' : '<p style="font-size:10px; color:#e44;">') + "$" + e.target.portfoliogain + "(" + e.target.portfoliogainpct.toFixed(1) + "%" + ")" + "</p>"
+                                    x:10,
+                                    y: 55,
+                                    text: '<p style="font-size:30px">' + '$' + e.target.y + "</p>" + "<br/>" + '<p style="font-size:10px; color:#1a1c20">' + '$' + '</p>' + "<br/>" + (e.target.portfoliogain > 0 ? '<p style="font-size:12px; color:#6c9;">' : '<p style="font-size:12px; color:#e44;">') + "$" + e.target.portfoliogain + "(" + e.target.portfoliogainpct.toFixed(1) + "%" + ")" + "</p>"
                                 });
                         },
 
@@ -125,7 +127,6 @@ class ChartWatchList extends Component {
 
     // https://www.highcharts.com/docs/chart-and-series-types/technical-indicator-series
     getTickerChartCallback(priceList) {
-
 
 
         let priceListAsc = priceList.slice();

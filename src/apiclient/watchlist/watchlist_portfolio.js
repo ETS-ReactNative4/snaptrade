@@ -14,7 +14,6 @@ const watchlist_portfolio = {
                 return response.json()
             })
             .then((json) => {
-                console.warn(resource, json);
                 callback(json, tag_id,json)
             })
     },

@@ -263,7 +263,6 @@ class ChartPanel extends Component {
 
     // https://www.highcharts.com/docs/chart-and-series-types/technical-indicator-series
     getTickerChartCallback(ticker, selectedPeriod, priceList) {
-        console.warn(priceList)
         console.log('perf', 'received', new Date());
 
         let priceListAsc = priceList.slice();
@@ -295,7 +294,7 @@ class ChartPanel extends Component {
         // options.colors = (theme == 'lite') ? ['#0081f2'] : ['#2f7ed8']
         options.colors = ['#0081f2']
 
-        console.warn("optionsoptionsoptionsoptions", options)
+
 
         console.log('perf', 'draw', new Date());
 

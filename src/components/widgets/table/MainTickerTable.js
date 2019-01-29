@@ -45,6 +45,7 @@ class MainTickerTable extends Component {
         filteringTagObj={this.props.filteringTagObj}
         embeddableTagUuid={this.props.embeddableTagUuid}
         onShowTagsModal={this.props.onShowTagsModal}
+        onShowPortfolioModal={this.props.onShowPortfolioModal}
         onShowPriceQtyModal={this.props.onShowPriceQtyModal}
         onDeleteWatchlistTickerSubmit={this.props.onDeleteWatchlistTickerSubmit}
       />

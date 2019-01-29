@@ -18,7 +18,7 @@ const MainTickerTableUI = ({context, tickerList, columnList, narrow,
     // expand/collapse
     onSignalExpand, onSignalCollapse,
     // watchList
-    filteringTagObj, embeddableTagUuid, onDeleteWatchlistTickerSubmit, onShowTagsModal, onShowPriceQtyModal
+    filteringTagObj, embeddableTagUuid, onDeleteWatchlistTickerSubmit, onShowTagsModal,onShowPortfolioModal, onShowPriceQtyModal
     }) =>
   <div className="table-responsive">
     <p className='text-right small'>
@@ -68,6 +68,7 @@ const MainTickerTableUI = ({context, tickerList, columnList, narrow,
               onDeleteWatchlistTickerSubmit={onDeleteWatchlistTickerSubmit}
               onShowTagsModal={onShowTagsModal}
               onShowPriceQtyModal={onShowPriceQtyModal}
+              onShowPortfolioModal={onShowPortfolioModal}
           />
             { ticker.signalList &&
               <TickerDetailsRowUI
@@ -210,6 +211,11 @@ const MainTickerTableHeaderUI = ({context, columnList, sortColumn, sortOrder, on
       }
 
       {
+        columnList.has('signal_name') &&
+        <HeaderCellSortUI label1='portfolio' align='text-left'/>
+      }
+
+      {
         columnList.has('latest_signal_date') &&
         <HeaderCellSortUI label1='Signal Date' align='text-right'
           tooltipId='latest_signal_date' tooltip2='Last date the technical signal was fired' />
@@ -308,7 +314,7 @@ const MainTickerTableHeaderUI = ({context, columnList, sortColumn, sortOrder, on
 
 const MainTickerTableRowUI = ({context, item, columnList, onRowTickerClick,
   onSignalExpand, onSignalCollapse,
-  filteringTagObj, embeddableTagUuid, onDeleteWatchlistTickerSubmit, onShowTagsModal, onShowPriceQtyModal}) =>
+  filteringTagObj, embeddableTagUuid, onDeleteWatchlistTickerSubmit, onShowTagsModal, onShowPriceQtyModal, onShowPortfolioModal}) =>
   <tr data-ticker={item.ticker} onClick={onRowTickerClick}>
     <TickerCellUI
     ticker={item.ticker}
@@ -527,6 +533,16 @@ const MainTickerTableRowUI = ({context, item, columnList, onRowTickerClick,
             <span className="glyphicon glyphicon-plus" data-ticker={item.ticker} onClick={context.onWatchTicker}></span>
           </a>
         }
+      </td>
+    }
+
+    {
+      columnList.has('is_watchlist') &&
+      (filteringTagObj == null || filteringTagObj.owner === 'self') && !embeddableTagUuid &&
+      <td className='text-center'>
+        <a href="#portfolio" onClick={onShowPortfolioModal}>
+            <div data-ticker={item.ticker} >$</div>
+        </a>
       </td>
     }
 
