@@ -3,9 +3,9 @@ import Constants from '../../components/common/Constants.js';
 const resource = Constants.API_URL + '/watchlist/portfolio';
 
 const watchlist_portfolio = {
-    get: (callback, tagUuid, type) => {
+    get: (callback, tag_id) => {
         let accessToken = localStorage.getItem("accessToken");
-        fetch(resource, {
+        fetch(resource + "?" +  "tag_id=" + tag_id, {
             headers: {
                 "Authorization" : "Bearer " + accessToken
             }
@@ -15,7 +15,7 @@ const watchlist_portfolio = {
             })
             .then((json) => {
                 console.log(resource, json);
-                callback(json, tagUuid, type)
+                callback(json, tag_id, )
             })
     },
 }

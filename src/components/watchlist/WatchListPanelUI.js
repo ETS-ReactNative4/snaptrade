@@ -6,9 +6,10 @@ import CommentsPanelUI from '../engagement/CommentsPanelUI.js';
 import ChartWatchList from './ChartWatchList';
 import SharePanel from './SharePanel.js';
 import MainTickerTable from '../widgets/table/MainTickerTable.js';
+import {Glyphicon, OverlayTrigger, Popover} from "react-bootstrap";
 
 const WatchListPanelUI = ({
-                              context, anonymous, watchList,
+                              context, anonymous, watchList, tagId,
                               filteringTagObj, tagObjList,
                               onFilterByTagClick, onRefreshClick,
                               onRowTickerClick, onDeleteWatchlistTickerSubmit,
@@ -23,25 +24,32 @@ const WatchListPanelUI = ({
     <div>
         {
             !embeddableTagUuid &&
-            <TagFilterBox
-                context={context}
-                filteringTagObj={filteringTagObj}
-                tagObjList={tagObjList}
-                onFilterByTagClick={onFilterByTagClick}
-                onWatchlistTagsChange={onWatchlistTagsChange}
-            />
+            <div>
+                <TagFilterBox
+                    context={context}
+                    filteringTagObj={filteringTagObj}
+                    tagObjList={tagObjList}
+                    onFilterByTagClick={onFilterByTagClick}
+                    onWatchlistTagsChange={onWatchlistTagsChange}
+                />
+            </div>
         }
 
         {
             !filteringTagObj && !embeddableTagUuid &&
-            <div style={{alignItems:"center"}}>
+            <div style={{alignItems: "center"}}>
 
-                <div style={{width:"100%", padding:"10px"}}><ChartWatchList/></div>
-                <p align="center">Simulated Paper Portfolio based on all stocks in your watchlist</p>
+                <div style={{width: "100%", padding: "10px"}}><ChartWatchList tagId={tagId}/></div>
+                <OverlayTrigger trigger={['hover', 'focus']} placement="top"
+                                overlay={<Popover id="signal_strength">Portfolio is based on $10k paper money is used to buy each stock when it was added to the watchlist</Popover>}>
+                    <p align="center">
+                        Simulated Paper Portfolio based on all stocks in your watchlist
+                    </p>
+                </OverlayTrigger>
                 <AddTickersBox
                     onWatchlistTickersChange={onWatchlistTickersChange}
                 />
-                
+
             </div>
         }
 
@@ -63,7 +71,7 @@ const WatchListPanelUI = ({
                     />
                 </div>
                 <div className='clearfix'/>
-                <div style={{width:"100%"}}><ChartWatchList/></div>
+                <div style={{width: "100%"}}><ChartWatchList tagId={tagId}/></div>
             </div>
         }
 

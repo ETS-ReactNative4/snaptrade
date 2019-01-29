@@ -20,6 +20,7 @@ class WatchListPanel extends Component {
 
       // tags
       tagObjList : [],
+      tag_id: '',
       showTagsModal : false,
       tickerForTagsModal : null,
       newTagInput : null,
@@ -94,6 +95,7 @@ class WatchListPanel extends Component {
     return (
       <div>
         <WatchListPanelUI
+            tagId={this.state.tag_id}
           context={this.props.context}
           anonymous={this.props.anonymous}
           watchList={this.state.watchList}
@@ -278,7 +280,7 @@ class WatchListPanel extends Component {
     event.preventDefault()
     let tagId = event.target.getAttribute('data-tag_id')
     let tagUuid = event.target.getAttribute('data-tagUuid')
-    console.log(tagId, tagUuid)
+    this.setState({tag_id: tagId});
     if (tagUuid === 'all') {
       tagId = null;
       tagUuid = null;
