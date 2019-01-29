@@ -21,14 +21,11 @@ class ChartPanel extends Component {
 
     render() {
         return (
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, vero.s
-                <ChartPanelUI
-                    isLoading={this.state.isLoading}
-                    ticker={this.props.ticker}
-                    options={options}
-                />
-            </div>
+            <ChartPanelUI
+                isLoading={this.state.isLoading}
+                ticker={this.props.ticker}
+                options={options}
+            />
         );
     }
 
@@ -266,6 +263,7 @@ class ChartPanel extends Component {
 
     // https://www.highcharts.com/docs/chart-and-series-types/technical-indicator-series
     getTickerChartCallback(ticker, selectedPeriod, priceList) {
+        console.warn(priceList)
         console.log('perf', 'received', new Date());
 
         let priceListAsc = priceList.slice();
@@ -290,14 +288,14 @@ class ChartPanel extends Component {
             })
         )
         options.series = this.getOptionsSeries(eventArray);
-        // options.rangeSelector = this.getOptionsRangeSelector();
+        options.rangeSelector = this.getOptionsRangeSelector();
         options.series[0].data = newArray;
         // let theme = this.props.context.theme;
         // this switch is not working; #0081f2 is always shown
         // options.colors = (theme == 'lite') ? ['#0081f2'] : ['#2f7ed8']
         options.colors = ['#0081f2']
 
-        console.warn("optionsoptionsoptionsoptions",options)
+        console.warn("optionsoptionsoptionsoptions", options)
 
         console.log('perf', 'draw', new Date());
 

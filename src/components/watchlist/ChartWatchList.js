@@ -1,25 +1,22 @@
 import React, {Component} from 'react';
-import ChartPanelUI from './ChartWatchListUI.js';
+import ChartWatchListUI from './ChartWatchListUI.js';
 import watchlist_portfolio from '../../apiclient/watchlist/watchlist_portfolio';
+import ChartPanelUI from "../ticker/ChartPanel";
 
 class ChartWatchList extends Component {
     constructor(props) {
         super(props);
         this.state = {
             isLoading: true,
-            eventArray: null,
             data: null,
-            ohlcData: null,
-            title: {}
         };
 
         this.getTickerChartCallback = this.getTickerChartCallback.bind(this);
     }
 
     render() {
-       console.warn(this.props.tagId);
         return (
-            <ChartPanelUI
+            <ChartWatchListUI
                 isLoading={this.state.isLoading}
                 options={options}
             />
@@ -28,26 +25,22 @@ class ChartWatchList extends Component {
 
     componentWillMount() {
         console.log('perf', 'calling 1yr', new Date());
-        watchlist_portfolio.get(this.getTickerChartCallback, this.props.tagId);
+
+        watchlist_portfolio.get(this.getTickerChartCallback, this.props.tagId, "1y_a");
     }
 
-    test = (ticker, selectedPeriod, priceList) => {
-        console.warn(ticker, selectedPeriod, priceList)
-    };
 
-    getOptionsSeries() {
-        let s = [
+    getOptionsSeries = (newArray) => {
+        return [
             {
-                data: [],
-                onSeries: 'dataseries',
-                shape: 'circlepin',
+                data: newArray,
                 events: {
                     mouseOut: (e) => {
                         let chart = e.target.chart;
                         if (!chart.lbl) {
                             chart.lbl = chart.renderer.label('')
                                 .attr({
-                                    translateY:23
+                                    translateY: 23
                                 })
                                 .css({
                                     color: '#FFFFFF',
@@ -58,7 +51,7 @@ class ChartWatchList extends Component {
                         chart.lbl
                             .show()
                             .attr({
-                                y:60,
+                                y: 60,
                                 text: '<p style="font-size:30px">' + '$' + e.target.data[0].y + "</p>" + "<br/>" + '<p style="font-size:10px; color:#1a1c20">' + '$' + '</p>' + "<br/>" + (e.target.data[0].portfoliogai > 0 ? '<p style="font-size:10px; color:#6c9;">' : '<p style="font-size:10px; color:#e44;">') + "$" + e.target.data[0].portfoliogain + "(" + e.target.data[0].portfoliogainpct.toFixed(1) + "%" + ")" + "</p>"
                             });
                     }
@@ -68,10 +61,9 @@ class ChartWatchList extends Component {
                         mouseOver: (e) => {
                             let chart = e.target.series.chart;
                             if (!chart.lbl) {
-                                console.warn(chart.renderer)
                                 chart.lbl = chart.renderer.label('')
                                     .attr({
-                                        translateY:23
+                                        translateY: 23
                                     })
                                     .css({
                                         color: '#FFFFFF',
@@ -81,7 +73,7 @@ class ChartWatchList extends Component {
                             chart.lbl
                                 .show()
                                 .attr({
-                                    y:60,
+                                    y: 60,
                                     text: '<p style="font-size:30px">' + '$' + e.target.y + "</p>" + "<br/>" + '<p style="font-size:10px; color:#1a1c20">' + '$' + '</p>' + "<br/>" + (e.target.portfoliogai > 0 ? '<p style="font-size:10px; color:#6c9;">' : '<p style="font-size:10px; color:#e44;">') + "$" + e.target.portfoliogain + "(" + e.target.portfoliogainpct.toFixed(1) + "%" + ")" + "</p>"
                                 });
                         },
@@ -89,71 +81,70 @@ class ChartWatchList extends Component {
                     }
                 },
                 tooltip: {
+                    valueDecimals: 2,
                     pointFormat: '<div>portfolio gain: {point.portfoliogain}<br/> portfolio gain pct: {point.portfoliogainpct}</div>'
                 },
             },
         ];
-        return s
     }
 
-    // getOptionsRangeSelector() {
-    //     let s = {
-    //         buttons: [
-    //             {
-    //                 type: 'month',
-    //                 count: 1,
-    //                 text: '1m'
-    //             }, {
-    //                 type: 'month',
-    //                 count: 3,
-    //                 text: '3m'
-    //             }, {
-    //                 type: 'month',
-    //                 count: 6,
-    //                 text: '6m'
-    //             }, {
-    //                 type: 'ytd',
-    //                 count: 1,
-    //                 text: 'YTD'
-    //             }, {
-    //                 type: 'year',
-    //                 count: 1,
-    //                 text: '1y'
-    //             }, {
-    //                 type: 'all',
-    //                 count: 1,
-    //                 text: '5y'
-    //             }
-    //         ],
-    //         selected: 4,
-    //         inputEnabled:false
-    //     }
-    //     return s
-    // }
-    //
+    getOptionsRangeSelector = () => {
+        return {
+            buttons: [
+                {
+                    type: 'day',
+                    count: 7,
+                    text: '7d'
+                }, {
+                    type: 'month',
+                    count: 3,
+                    text: '3m'
+                }, {
+                    type: 'month',
+                    count: 6,
+                    text: '6m'
+                }, {
+                    type: 'all',
+                    count: 1,
+                    text: '1y'
+                }
+            ],
+            selected: 3,
+            inputEnabled: false
+        };
+    };
 
+    getYAxis = () => {
+        return [
+            {
+                title: {text: ''},
+            },
+        ]
+    }
 
 
     // https://www.highcharts.com/docs/chart-and-series-types/technical-indicator-series
     getTickerChartCallback(priceList) {
-        console.log('perf', 'received', new Date());
+
+
 
         let priceListAsc = priceList.slice();
-        console.warn(priceListAsc[0])
-        let newArray = priceListAsc.map(price => ({
-            "x": Date.parse(price.date),
-            y: Number.parseFloat(price.portfolio_value),
+
+        let newArray = priceListAsc.reverse().map((price, index) => ({
+            x: Date.parse(price.date),
+            y: price.portfolio_value,
             portfoliogain: price.portfolio_gain,
             portfoliogainpct: price.portfolio_pct_gain
         }));
-
-        options.yAxis = [{title: {text: ''}}];
-        options.series = this.getOptionsSeries();
-        // options.rangeSelector = this.getOptionsRangeSelector();
+        options.yAxis = this.getYAxis()
+        options.series = this.getOptionsSeries([])
         options.series[0].data = newArray;
+        options.rangeSelector = this.getOptionsRangeSelector();
+
+
         options.colors = ['#0081f2'];
 
-        console.log('perf', 'draw', new Date());
+        this.setState({data: newArray})
 
         this.setState({
             isLoading: false,
@@ -169,6 +160,7 @@ const options = {
     scrollbar: {
         enabled: false
     },
+    series: [],
     chart: {
         height: '300px'
     },
