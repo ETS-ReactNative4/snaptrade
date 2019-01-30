@@ -1,8 +1,8 @@
 import React from 'react';
 
 const AddTickersBoxUI = ({newTickers, addTickersSuccess, addTickersError,
-    onAddTickersEdit, onAddTickersSubmit}) =>
-  <div style={{'display':'inline-block'}} className="addtickers-block">
+    onAddTickersEdit, onAddTickersSubmit,style}) =>
+  <div style={{'display':'inline-block',...style}} className="addtickers-block">
     <form className="form-inline">
       <div className="form-group">
         <div className="input-group">

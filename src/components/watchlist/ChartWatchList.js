@@ -58,7 +58,7 @@ class ChartWatchList extends Component {
                             .attr({
                                 x:10,
                                 y: 55,
-                                text: '<p style="font-size:30px">' + '$' + e.target.data[0].y + "</p>" + "<br/>" + '<p style="font-size:10px; color:#1a1c20">' + '$' + '</p>' + "<br/>" + (e.target.data[0].portfoliogain > 0 ? '<p style="font-size:12px; color:#6c9;">' : '<p style="font-size:12px; color:#e44;">') + "$" + e.target.data[0].portfoliogain + "(" + e.target.data[0].portfoliogainpct.toFixed(1) + "%" + ")" + "</p>"
+                                text: '<p style="font-size:30px">' + '$' + e.target.data[e.target.data.length-1].y.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</p>" + "<br/>" + '<p style="font-size:10px; color:#1a1c20">' + '$' + '</p>' + "<br/>" + (e.target.data[e.target.data.length-1].portfoliogain > 0 ? '<p style="font-size:12px; color:#6c9;">' : '<p style="font-size:12px; color:#e44;">') + "$" + e.target.data[e.target.data.length-1].portfoliogain.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "(" + e.target.data[e.target.data.length-1].portfoliogainpct.toFixed(1) + "%" + ")" + "</p>"
                             });
                     }
                 },
@@ -81,7 +81,7 @@ class ChartWatchList extends Component {
                                 .attr({
                                     x:10,
                                     y: 55,
-                                    text: '<p style="font-size:30px">' + '$' + e.target.y + "</p>" + "<br/>" + '<p style="font-size:10px; color:#1a1c20">' + '$' + '</p>' + "<br/>" + (e.target.portfoliogain > 0 ? '<p style="font-size:12px; color:#6c9;">' : '<p style="font-size:12px; color:#e44;">') + "$" + e.target.portfoliogain + "(" + e.target.portfoliogainpct.toFixed(1) + "%" + ")" + "</p>"
+                                    text: '<p style="font-size:30px">' + '$' + e.target.y.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</p>" + "<br/>" + '<p style="font-size:10px; color:#1a1c20">' + '$' + '</p>' + "<br/>" + (e.target.portfoliogain > 0 ? '<p style="font-size:12px; color:#6c9;">' : '<p style="font-size:12px; color:#e44;">') + "$" + e.target.portfoliogain.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "(" + e.target.portfoliogainpct.toFixed(1) + "%" + ")" + "</p>"
                                 });
                         },
 

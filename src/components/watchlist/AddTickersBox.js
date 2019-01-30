@@ -21,6 +21,7 @@ class AddTickersBox extends Component {
   render() {
     return (
       <AddTickersBoxUI
+          style={this.props.style}
         newTickers={this.state.newTickers}
         addTickersSuccess={this.state.addTickersSuccess}
         addTickersError={this.state.addTickersError}
