@@ -25,7 +25,7 @@ const PanelTickerTableUI = ({context, title, noDataMsg, tickerList, columnList, 
 
     <table style={{width: '100%', marginBottom: 0}} className='table table-hover'>
       {
-        tickerList && tickerList.length > 0 &&
+        tickerList && tickerList.length > 0 ?
         <TableHeaderUI
           context={context}
           tickerCount={tickerList.length}
@@ -37,7 +37,7 @@ const PanelTickerTableUI = ({context, title, noDataMsg, tickerList, columnList, 
           wide={wide}
           isWatchlist={isWatchlist}
           columnList={columnList}
-        />
+        /> : <h3 align="center">There is no alert for user</h3>
       }
       {
         !tickerList && (!anonymousMsg || anonymousMsg && !context.anonymous) &&

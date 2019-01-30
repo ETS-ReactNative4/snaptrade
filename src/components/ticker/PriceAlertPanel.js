@@ -12,6 +12,7 @@ class PriceAlertPanel extends Component {
       ticker: '',
       buyprice: '',
       sellprice: '',
+        tickerList:[],
       tradetype: '',
       errorMessage: '',
       isLoading: '',
@@ -38,6 +39,7 @@ class PriceAlertPanel extends Component {
         context={this.props.context}
         anonymous={this.props.anonymous}
         toggleChange={this.handletoggleChange}
+        tickerList={this.state.tickerList}
         isChecked={this.state.isChecked}
         onBuyPriceEdit={this.handleBuyPrice}
         onSellPriceEdit={this.handleSellPrice}
@@ -124,9 +126,10 @@ class PriceAlertPanel extends Component {
 
   watchlistAlertTickersCallback(tickerList) {
     console.log('alertlist', tickerList);
+    this.setState({tickerList})
     if ('watchList' in this.props.context) {
       let watchList = this.props.context.watchList
-      tickerList.map((ticker) => {
+        tickerList.length > 0 && tickerList.map((ticker) => {
         watchList && watchList.map((watch) => {
           if (watch.ticker === ticker.ticker)
             ticker.is_in_watchlist = true
