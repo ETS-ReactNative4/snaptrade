@@ -13,7 +13,7 @@ const WatchListPanelUI = ({
                               filteringTagObj, tagObjList,
                               onFilterByTagClick, onRefreshClick,
                               onRowTickerClick, onDeleteWatchlistTickerSubmit,
-                              showTagsModal, onShowTagsModal, onShowPriceQtyModal,
+                              showTagsModal, onShowTagsModal,onShowPortfolioModal, onShowPriceQtyModal,
                               ratingSummary, commentSummary, shareSummary,
                               onEngagementChange,
                               onWatchlistTickersChange, onWatchlistTagsChange,
@@ -75,7 +75,6 @@ const WatchListPanelUI = ({
             </div>
         }
 
-
         <MainTickerTable
             context={context}
             tickerList={watchList}
@@ -85,6 +84,7 @@ const WatchListPanelUI = ({
             filteringTagObj={filteringTagObj}
             embeddableTagUuid={embeddableTagUuid}
             onShowTagsModal={onShowTagsModal}
+            onShowPortfolioModal={onShowPortfolioModal}
             onShowPriceQtyModal={onShowPriceQtyModal}
             onDeleteWatchlistTickerSubmit={onDeleteWatchlistTickerSubmit}
             onRefreshClick={onRefreshClick}

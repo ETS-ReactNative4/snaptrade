@@ -56,12 +56,14 @@ class PanelTickerTable extends Component {
       return;
 
     if ('watchList' in props.context) {
-      let watchList = props.context.watchList
-      props.tickerList.map((ticker) => {
-        watchList && watchList.map((watch) => {
+      let watchList = props.context
+      console.warn(watchList.length)
+      console.warn(props.tickerList.length > 0)
+      props.tickerList.length > 0  && props.tickerList.map((ticker) => {
+        watchList.length && watchList.map((watch) => {
           ticker.is_in_watchlist = false
         })
-        watchList && watchList.map((watch) => {
+        watchList.length && watchList.map((watch) => {
           if (watch.ticker === ticker.ticker)
             ticker.is_in_watchlist = true
         })
