@@ -48,13 +48,19 @@ class TickerPanelShortInfo extends Component {
     render() {
         const {shortDesc, showDesc,showStories,stories} = this.state;
         if (shortDesc !== null && shortDesc.length !== 0) {
-            return (
+            return (              
                 <div style={{marginTop: 10}}>
-                    <br/>
                     <h3 className="panel-title"><b>Quick Summary</b></h3>
+                    <div style={{marginTop: 5}}>
+                        {!showDesc ? shortDesc.slice(0, 170) + "..." : shortDesc}
+                        {' '}
+                        {this.More("showDesc, showDesc")}
+                    </div>
+                    <br/>
+                      
                     {this.StoriesList(!showStories ? stories.slice(0, 5)  : stories)}
-                    {this.More("showStories",showStories)}              
-                </div>
+                    {this.More("showStories",showStories)} 
+                </div>                             
             );
         }
         return (
